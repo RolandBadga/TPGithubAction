@@ -16,7 +16,7 @@ jobs:
       - name: Build and test with Maven
         env:
           GITHUB_TOKEN: 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
-        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=RolandBadga_TPGithubAction -Dsonar.organization=rolandbadga1234 -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{secrets.SONAR_TOKEN }} --file ./simple-api/pom.xml
+        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=RolandBadga_TPGithubAction -Dsonar.organization=rolandbadga12345 -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{secrets.SONAR_TOKEN }} --file ./simple-api/pom.xml
   build-and-push-docker-image:
     needs: build-and-test-app
     runs-on: ubuntu-latest
